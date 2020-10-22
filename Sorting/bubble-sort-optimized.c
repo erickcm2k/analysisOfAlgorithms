@@ -1,5 +1,5 @@
 #include "stdio.h"
-
+#include "stdbool.h"
 void swap(int *n1, int *n2)
 {
     int temp = *n1;
@@ -7,20 +7,19 @@ void swap(int *n1, int *n2)
     *n2 = temp;
 }
 
-void bubbleSort(int *numbers, int size)
+void bubbleSortOptimized(int *numbers, int size)
 {
-    int swaps = 0;
-    int movements = 0;
-    printf("Sorted numbers \n");
-    for (int i = 0; i < size - 1; i++)
+    bool changes = true;
+    int i = 0;
+    while ((i < size) && (changes != false))
     {
+        changes = false;
         for (int j = 0; j < (size - 1) - i; j++)
         {
-            movements++;
-            if (numbers[j] > numbers[j + 1])
+            if (numbers[i] < numbers[j])
             {
-                swaps++;
-                swap(&numbers[j], &numbers[j + 1]);
+                swap(&numbers[i], &numbers[j]);
+                changes = true;
             }
         }
     }
@@ -37,8 +36,8 @@ int main(int argc, char const *argv[])
         scanf("%d", &numbers[i]);
     }
 
-    bubbleSort(numbers, dsSize);
-
+    bubbleSortOptimized(numbers, dsSize);
+    printf("Sorted numbers \n");
     for (int i = 0; i < dsSize; i++)
     {
         printf("%d \n", numbers[i]);
@@ -46,3 +45,4 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
+
