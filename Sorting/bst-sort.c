@@ -205,7 +205,6 @@ void inorderTraversal(struct Node *root)
     inorderTraversal(root->right);
 }
 
-
 int main(int argc, char const *argv[])
 {
     int dsSize;

@@ -16,7 +16,7 @@ void bubbleSortOptimized(int *numbers, int size)
         changes = false;
         for (int j = 0; j < (size - 1) - i; j++)
         {
-            if (numbers[i] < numbers[j])
+            if (numbers[j] < numbers[j + 1])
             {
                 swap(&numbers[i], &numbers[j]);
                 changes = true;
@@ -45,4 +45,3 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
-
