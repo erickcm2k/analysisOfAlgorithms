@@ -207,13 +207,15 @@ void inorderTraversal(struct Node *root)
 
 int main(int argc, char const *argv[])
 {
+    // int hundredThousand = 100000;
     int dsSize;
     int value;
     scanf("%d", &dsSize);
     struct Node *root = NULL;
-
+    printf("Size -> %d", dsSize);
     for (int i = 0; i < dsSize; i++)
     {
+        // printf("Inserting %d\n", i);
         scanf("%d", &value);
         root = insert(root, value);
     }
