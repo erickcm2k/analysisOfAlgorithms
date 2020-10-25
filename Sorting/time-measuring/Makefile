@@ -1,4 +1,4 @@
-listaligada.o: tiempo.c
+tiempo.o: tiempo.c
 	gcc tiempo.c -c -Wall
 main.o: main.c
 	gcc main.c -c -Wall
