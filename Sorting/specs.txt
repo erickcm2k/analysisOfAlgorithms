@@ -1,0 +1,7 @@
+Sistema Operativo:  MacOS Catalina 10.15.7
+Procesador:         Intel Core i7 4770HQ Quad-Core 2.2Ghz - 6Mb Caché L3
+RAM:                16GB DDR3 1600Mhz
+Compilador gcc:
+    Apple clang version 12.0.0 (clang-1200.0.32.21)
+    Target: x86_64-apple-darwin19.6.0
+    Thread model: posix
