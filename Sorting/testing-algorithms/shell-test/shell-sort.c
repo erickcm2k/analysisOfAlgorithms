@@ -36,38 +36,33 @@ int main(int argc, char const *argv[])
 {
     double utime0, stime0, wtime0, utime1, stime1, wtime1, n;
 
-    long long dsSize;
-    scanf("%lld", &dsSize);
-    int *numbers = (int *)malloc(sizeof(int) * dsSize);
+    if (argc != 2)
+    {
+        printf("\nIndique el tamanio del algoritmo.\n", argv[0]);
+        exit(1);
+    }
+    else
+    {
+        n = atoi(argv[1]);
+    }
 
+    int *numbers = (int *)malloc(sizeof(int) * n);
+    printf("\n\nSize of test is: [%.0f]\n\n", n);
     // algorithm begin
     uswtime(&utime0, &stime0, &wtime0);
 
-    for (int i = 0; i < dsSize; i++)
+    for (int i = 0; i < n; i++)
     {
         scanf("%d", &numbers[i]);
     }
 
-    shellSort(numbers, dsSize);
-    printf("Sorted numbers \n");
-    for (int i = 0; i < dsSize; i++)
-    {
-        // printf("[%d] -> %d \n",i, numbers[i]);
-    }
+    shellSort(numbers, n);
 
     uswtime(&utime1, &stime1, &wtime1);
 
-    printf("NORMAL\n");
     printf("real (Tiempo total)  %.10f s\n", wtime1 - wtime0);
     printf("user (Tiempo de procesamiento en CPU) %.10f s\n", utime1 - utime0);
     printf("sys (Tiempo en acciónes de E/S)  %.10f s\n", stime1 - stime0);
-    printf("CPU/Wall   %.10f %% \n", 100.0 * (utime1 - utime0 + stime1 - stime0) / (wtime1 - wtime0));
-    printf("\n");
-
-    printf("ORDEN EXPONENCIAL\n");
-    printf("real (Tiempo total)  %.10e s\n", wtime1 - wtime0);
-    printf("user (Tiempo de procesamiento en CPU) %.10e s\n", utime1 - utime0);
-    printf("sys (Tiempo en acciónes de E/S)  %.10e s\n", stime1 - stime0);
     printf("CPU/Wall   %.10f %% \n", 100.0 * (utime1 - utime0 + stime1 - stime0) / (wtime1 - wtime0));
     printf("\n");
 

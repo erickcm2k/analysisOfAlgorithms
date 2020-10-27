@@ -8,66 +8,72 @@ compile: shell-sort.o tiempo.o
 	gcc shell-sort.o tiempo.o
 
 100:
-	./a.out < ../../numbers/100.txt
+	./a.out 100 < ../../numbers/10m.txt
 
 1k:
-	./a.out < ../../numbers/1k.txt
+	./a.out 1000 < ../../numbers/10m.txt
 
 5k:
-	./a.out < ../../numbers/5k.txt
+	./a.out 5000 < ../../numbers/10m.txt
 
 10k:
-	./a.out < ../../numbers/10k.txt
-
+	./a.out 10000 < ../../numbers/10m.txt
 
 50k:
-	./a.out < ../../numbers/50k.txt
+	./a.out 50000 < ../../numbers/10m.txt
+
+100k:
+	./a.out 100000 < ../../numbers/10m.txt
 
 200k:
-	./a.out < ../../numbers/200k.txt
+	./a.out 200000 < ../../numbers/10m.txt
 
 400k:
-	./a.out < ../../numbers/400k.txt
+	./a.out 400000 < ../../numbers/10m.txt
 
 500k:
-	./a.out < ../../numbers/500k.txt
+	./a.out 500000 < ../../numbers/10m.txt
 
 600k:
-	./a.out < ../../numbers/600k.txt
+	./a.out 600000 < ../../numbers/10m.txt
 
 
 800k:
-	./a.out < ../../numbers/800k.txt
+	./a.out 800000 < ../../numbers/10m.txt
 
 1m:
-	./a.out < ../../numbers/1m.txt
+	./a.out 1000000 < ../../numbers/10m.txt
 
 2m:
-	./a.out < ../../numbers/2m.txt
+	./a.out 2000000 < ../../numbers/10m.txt
 
 3m:
-	./a.out < ../../numbers/3m.txt
+	./a.out 3000000 < ../../numbers/10m.txt
 
 4m:
-	./a.out < ../../numbers/4m.txt
+	./a.out 4000000 < ../../numbers/10m.txt
 
 5m:
-	./a.out < ../../numbers/5m.txt
+	./a.out 5000000 < ../../numbers/10m.txt
 
 6m:
-	./a.out < ../../numbers/6m.txt
+	./a.out 6000000 < ../../numbers/10m.txt
 
 7m:
-	./a.out < ../../numbers/7m.txt
+	./a.out 7000000 < ../../numbers/10m.txt
 
 8m:
-	./a.out < ../../numbers/8m.txt
+	./a.out 8000000 < ../../numbers/10m.txt
 
 9m:
-	./a.out < ../../numbers/9m.txt
+	./a.out 9000000 < ../../numbers/10m.txt
 
 10m:
-	./a.out < ../../numbers/10m.txt	
+	./a.out 10000000 < ../../numbers/10m.txt
+
+test-all:
+	echo -e "\n\n Testing for all numbers \n\n"
+	make 100 1k 5k 10k 50k 200k 400k 600k 800k 1m 2m 3m 4m 5m 6m 7m 8m 9m 10m
 
 clean:
 	rm -f *.o a.out
