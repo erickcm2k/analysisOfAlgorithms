@@ -9,8 +9,11 @@ xi=linspace(15000000,5000000000);
 z=polyval(p,estimaciones)
 
 
+
 t_real = plot(estimaciones, z)
 t_real.Marker = 'o'
 t_real.Color = 'b'
-
+title('Aproximaciones')
+ylabel('Tiempo (s)');
+xlabel('Tamaño de entrada');
 
