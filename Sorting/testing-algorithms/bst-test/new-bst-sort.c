@@ -18,8 +18,8 @@ node *createNode(int value);
 node *rightRotation(node *root);
 node *leftRotation(node *root);
 node *insert(node *root, int value);
-void inorderTraversal(node *root);
-
+void saveInorder(node *root);
+int *numbers;
 int main(int argc, char *argv[])
 {
     double utime0, stime0, wtime0, utime1, stime1, wtime1, n;
@@ -34,10 +34,10 @@ int main(int argc, char *argv[])
         n = atoi(argv[1]);
     }
 
-    int *numbers = (int *)malloc(sizeof(int) * n);
+    numbers = (int *)malloc(sizeof(int) * n);
     printf("\n\nSize of test is: [%.0f]\n\n", n);
     int value, i;
-    node *ABBSort = NULL;
+    node *root = NULL;
 
     // algorithm begin
     uswtime(&utime0, &stime0, &wtime0);
@@ -45,10 +45,10 @@ int main(int argc, char *argv[])
     for (i = 0; i < n; ++i)
     {
         scanf("%d", &numbers[i]);
-        ABBSort = insert(ABBSort, numbers[i]);
+        root = insert(root, numbers[i]);
     }
 
-    inorderTraversal(ABBSort);
+    saveInorder(root);
 
     // algorithm end
     uswtime(&utime1, &stime1, &wtime1);
@@ -165,12 +165,13 @@ node *insert(node *root, int value)
     return root;
 }
 
-void inorderTraversal(node *root)
+void saveInorder(node *root)
 {
+    long long i = 0;
     if (root != NULL)
     {
-        inorderTraversal(root->left);
-        // print("%d\n", root->value);
-        inorderTraversal(root->right);
+        saveInorder(root->left);
+        numbers[i++] = root->value;
+        saveInorder(root->right);
     }
 }
