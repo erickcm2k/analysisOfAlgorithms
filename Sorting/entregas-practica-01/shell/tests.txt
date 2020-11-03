@@ -1,0 +1,186 @@
+Size of test is: [100]
+
+real (Tiempo total)  0.0006620884 s
+user (Tiempo de procesamiento en CPU) 0.0001700000 s
+sys (Tiempo en acciónes de E/S)  0.0002440000 s
+CPU/Wall   62.5294150522 % 
+
+./a.out 1000 < ../../numbers/10m.txt
+
+
+Size of test is: [1000]
+
+real (Tiempo total)  0.0009028912 s
+user (Tiempo de procesamiento en CPU) 0.0004530000 s
+sys (Tiempo en acciónes de E/S)  0.0002370000 s
+CPU/Wall   76.4211713758 % 
+
+./a.out 5000 < ../../numbers/10m.txt
+
+
+Size of test is: [5000]
+
+real (Tiempo total)  0.0022888184 s
+user (Tiempo de procesamiento en CPU) 0.0018710000 s
+sys (Tiempo en acciónes de E/S)  0.0002320000 s
+CPU/Wall   91.8814720000 % 
+
+./a.out 10000 < ../../numbers/10m.txt
+
+
+Size of test is: [10000]
+
+real (Tiempo total)  0.0043179989 s
+user (Tiempo de procesamiento en CPU) 0.0038340000 s
+sys (Tiempo en acciónes de E/S)  0.0002980000 s
+CPU/Wall   95.6924748937 % 
+
+./a.out 50000 < ../../numbers/10m.txt
+
+
+Size of test is: [50000]
+
+real (Tiempo total)  0.0231499672 s
+user (Tiempo de procesamiento en CPU) 0.0224760000 s
+sys (Tiempo en acciónes de E/S)  0.0004860000 s
+CPU/Wall   99.1880455293 % 
+
+./a.out 200000 < ../../numbers/10m.txt
+
+
+Size of test is: [200000]
+
+real (Tiempo total)  0.1025629044 s
+user (Tiempo de procesamiento en CPU) 0.1010480000 s
+sys (Tiempo en acciónes de E/S)  0.0012220000 s
+CPU/Wall   99.7144149147 % 
+
+./a.out 400000 < ../../numbers/10m.txt
+
+
+Size of test is: [400000]
+
+real (Tiempo total)  0.2220549583 s
+user (Tiempo de procesamiento en CPU) 0.2196620000 s
+sys (Tiempo en acciónes de E/S)  0.0020400000 s
+CPU/Wall   99.8410491051 % 
+
+./a.out 600000 < ../../numbers/10m.txt
+
+
+Size of test is: [600000]
+
+real (Tiempo total)  0.3357808590 s
+user (Tiempo de procesamiento en CPU) 0.3326040000 s
+sys (Tiempo en acciónes de E/S)  0.0028430000 s
+CPU/Wall   99.9005723571 % 
+
+./a.out 800000 < ../../numbers/10m.txt
+
+
+Size of test is: [800000]
+
+real (Tiempo total)  0.4803540707 s
+user (Tiempo de procesamiento en CPU) 0.4764240000 s
+sys (Tiempo en acciónes de E/S)  0.0036340000 s
+CPU/Wall   99.9383640773 % 
+
+./a.out 1000000 < ../../numbers/10m.txt
+
+
+Size of test is: [1000000]
+
+real (Tiempo total)  0.5886080265 s
+user (Tiempo de procesamiento en CPU) 0.5837500000 s
+sys (Tiempo en acciónes de E/S)  0.0045080000 s
+CPU/Wall   99.9405331751 % 
+
+./a.out 2000000 < ../../numbers/10m.txt
+
+
+Size of test is: [2000000]
+
+real (Tiempo total)  1.3140280247 s
+user (Tiempo de procesamiento en CPU) 1.3048210000 s
+sys (Tiempo en acciónes de E/S)  0.0087870000 s
+CPU/Wall   99.9680353337 % 
+
+./a.out 3000000 < ../../numbers/10m.txt
+
+
+Size of test is: [3000000]
+
+real (Tiempo total)  2.0790300369 s
+user (Tiempo de procesamiento en CPU) 2.0638340000 s
+sys (Tiempo en acciónes de E/S)  0.0145200000 s
+CPU/Wall   99.9674830611 % 
+
+./a.out 4000000 < ../../numbers/10m.txt
+
+
+Size of test is: [4000000]
+
+real (Tiempo total)  2.9057221413 s
+user (Tiempo de procesamiento en CPU) 2.8874290000 s
+sys (Tiempo en acciónes de E/S)  0.0175540000 s
+CPU/Wall   99.9745625621 % 
+
+./a.out 5000000 < ../../numbers/10m.txt
+
+
+Size of test is: [5000000]
+
+real (Tiempo total)  3.7912540436 s
+user (Tiempo de procesamiento en CPU) 3.7675520000 s
+sys (Tiempo en acciónes de E/S)  0.0226820000 s
+CPU/Wall   99.9730948238 % 
+
+./a.out 6000000 < ../../numbers/10m.txt
+
+
+Size of test is: [6000000]
+
+real (Tiempo total)  4.6123199463 s
+user (Tiempo de procesamiento en CPU) 4.5844150000 s
+sys (Tiempo en acciónes de E/S)  0.0265440000 s
+CPU/Wall   99.9704932376 % 
+
+./a.out 7000000 < ../../numbers/10m.txt
+
+
+Size of test is: [7000000]
+
+real (Tiempo total)  5.4642441273 s
+user (Tiempo de procesamiento en CPU) 5.4290310000 s
+sys (Tiempo en acciónes de E/S)  0.0319310000 s
+CPU/Wall   99.9399344686 % 
+
+./a.out 8000000 < ../../numbers/10m.txt
+
+
+Size of test is: [8000000]
+
+real (Tiempo total)  6.5550670624 s
+user (Tiempo de procesamiento en CPU) 6.5135980000 s
+sys (Tiempo en acciónes de E/S)  0.0379190000 s
+CPU/Wall   99.9458424705 % 
+
+./a.out 9000000 < ../../numbers/10m.txt
+
+
+Size of test is: [9000000]
+
+real (Tiempo total)  7.1823101044 s
+user (Tiempo de procesamiento en CPU) 7.1360230000 s
+sys (Tiempo en acciónes de E/S)  0.0425850000 s
+CPU/Wall   99.9484552419 % 
+
+./a.out 10000000 < ../../numbers/10m.txt
+
+
+Size of test is: [10000000]
+
+real (Tiempo total)  8.5418469906 s
+user (Tiempo de procesamiento en CPU) 8.4872700000 s
+sys (Tiempo en acciónes de E/S)  0.0490360000 s
+CPU/Wall   99.9351312358 % 
