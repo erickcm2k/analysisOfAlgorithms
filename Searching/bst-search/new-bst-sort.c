@@ -21,49 +21,51 @@ node *insert(node *root, int value);
 void saveInorder(node *root);
 int *numbers;
 struct node *search(node *root, int key);
+struct node *search(node *root, int key);
 int main(int argc, char *argv[])
 {
-    double utime0, stime0, wtime0, utime1, stime1, wtime1, cantidadNumeros, NumeroABuscar;
 
-    if (argc != 3)
+    double utime0, stime0, wtime0, utime1, stime1, wtime1, currentN;
+    double numsToFind[20] = {322486, 14700764, 3128036, 6337399, 61396, 10393545, 2417445644, 1295390003, 450057883, 187645041, 1980098116, 152503, 5000, 1493283650, 214826, 1843349527, 1360839354, 2109248666, 2147470852, 0};
+
+    if (argc != 2)
     {
         printf("Se deben ingresar exactamente dos argumentos.\n\n");
         return -1;
     }
     else
     {
-        cantidadNumeros = atoi(argv[1]);
-        NumeroABuscar = atoi(argv[2]);
+        currentN = atoi(argv[1]);
     }
 
-    numbers = (int *)malloc(sizeof(int) * cantidadNumeros);
-    printf("\n\nSize of test is: [%.0f]\n\n", cantidadNumeros);
+    numbers = (int *)malloc(sizeof(int) * currentN);
+    printf("\n\nSize of test is: [%.0f]\n\n", currentN);
     node *root = NULL;
 
     printf("Leyendo numeros...\n");
 
-    for (int i = 0; i < cantidadNumeros; ++i)
+    for (int i = 0; i < currentN; ++i)
     {
         scanf("%d", &numbers[i]);
         root = insert(root, numbers[i]);
     }
 
-    saveInorder(root);
-
     // // algorithm begin
-    printf("Buscando el numero [%.0f]...\n", NumeroABuscar);
     uswtime(&utime0, &stime0, &wtime0);
-    node *toFind = search(root, NumeroABuscar);
+    for (int i = 0; i < 20; i++)
+    {
+        node *toFind = search(root, numsToFind[i]);
+        if (!toFind)
+        {
+            printf("\nNumero [%.0f] NO encontrado.\n\n", numsToFind[i]);
+        }
+        else
+        {
+            printf("\nNumero [%.0f] encontrado.\n\n", numsToFind[i]);
+        }
+    }
     uswtime(&utime1, &stime1, &wtime1);
     // algorithm end
-    if (!toFind)
-    {
-        printf("\nNumero [%.0f] no encontrado.\n\n", NumeroABuscar);
-    }
-    else
-    {
-        printf("\nNumero [%.0f] encontrado.\n\n", NumeroABuscar);
-    }
 
     //Cálculo del tiempo de ejecución del programa
     printf("\n");
@@ -200,7 +202,6 @@ void saveInorder(node *root)
     }
 }
 
-// C function to search a given key in a given BST
 struct node *search(node *root, int key)
 {
     // Base Cases: root is null or key is present at root
