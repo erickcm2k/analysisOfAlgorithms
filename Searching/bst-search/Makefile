@@ -1,10 +1,10 @@
 tiempo.o: tiempo.c
 	gcc tiempo.c -c -Wall
-new-bst-sort.o: new-bst-sort.c
-	gcc new-bst-sort.c -c -Wall
+bst-search.o: bst-search.c
+	gcc bst-search.c -c -Wall
 
-compile: new-bst-sort.o tiempo.o
-	gcc new-bst-sort.o tiempo.o
+compile: bst-search.o tiempo.o
+	gcc bst-search.o tiempo.o
 
 # Numeros desodernados
 
@@ -40,7 +40,7 @@ compile: new-bst-sort.o tiempo.o
 
 test-all:
 	echo -e "\n\n Testing for all numbers \n\n"
-	make 100 1k 5k 10k 50k 200k 400k 600k 800k 1m 2m 3m 4m 5m 6m 7m 8m 9m 10m
+	make 1m 2m 3m 4m 5m 6m 7m 8m 9m 10m
 
 clean:
 	rm -f *.o a.out

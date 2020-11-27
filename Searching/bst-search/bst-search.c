@@ -39,10 +39,9 @@ int main(int argc, char *argv[])
     }
 
     numbers = (int *)malloc(sizeof(int) * currentN);
-    printf("\n\nSize of test is: [%.0f]\n\n", currentN);
     node *root = NULL;
 
-    printf("Leyendo numeros...\n");
+    printf("\n\nLeyendo numeros...\n");
 
     for (int i = 0; i < currentN; ++i)
     {
@@ -50,23 +49,25 @@ int main(int argc, char *argv[])
         root = insert(root, numbers[i]);
     }
 
-    // // algorithm begin
-    uswtime(&utime0, &stime0, &wtime0);
+    printf("\n%-16s %-16s %-16s %-16s\n\n", "Numero", "N", "Tiempo", "Encontrado");
     for (int i = 0; i < 20; i++)
     {
+        // // algorithm begin
+        uswtime(&utime0, &stime0, &wtime0);
         node *toFind = search(root, numsToFind[i]);
         if (!toFind)
         {
-            printf("\nNumero [%.0f] NO encontrado.\n\n", numsToFind[i]);
+            printf("%10.0f \t %.0f \t%.10e \t NO\n", numsToFind[i], currentN, wtime1 - wtime0);
         }
         else
         {
-            printf("\nNumero [%.0f] encontrado.\n\n", numsToFind[i]);
+            printf("%10.0f \t %.0f \t%.10e \t SI\n", numsToFind[i], currentN, wtime1 - wtime0);
         }
+        uswtime(&utime1, &stime1, &wtime1);
+        // algorithm end
     }
-    uswtime(&utime1, &stime1, &wtime1);
-    // algorithm end
-
+    printf("\n");
+        /*
     //Cálculo del tiempo de ejecución del programa
     printf("\n");
     printf("real (Tiempo total)  %.10f s\n", wtime1 - wtime0);
@@ -82,8 +83,8 @@ int main(int argc, char *argv[])
     printf("sys (Tiempo en acciónes de E/S)  %.10e s\n", stime1 - stime0);
     printf("CPU/Wall   %.10f %% \n", 100.0 * (utime1 - utime0 + stime1 - stime0) / (wtime1 - wtime0));
     printf("\n");
-
-    return 0;
+*/
+        return 0;
 }
 
 int max(int a, int b)
